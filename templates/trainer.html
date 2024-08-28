@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trainer - GCF Skill Acquisition Registration Portal</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/trainer.css') }}?{{ cache_id }}">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="module" src="{{ url_for('static', filename='js/trainer.js') }}?{{ cache_id }}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form id="trainer-form">
+                <div class="header">
+                    <h1>
+                        <img src="{{ url_for('static', filename='images/pentecost_logo.jpeg') }}">
+                        GCF Skill Acquisition Registration Portal
+                        <img src="{{ url_for('static', filename='images/nysc_logo.jpeg') }}">
+                    </h1>
+                </div>
+                <p>
+                Fill in the form with the skill you volunteer to offer.
+                </p>
+                <h4>Contact Details</h4>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Contact</label>
+                    <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Skill</label>
+                    <input type="tel" id="skills" placeholder="Enter your volunteer skills separated with comma. e.g., Data science, Devops, Shoe Making" required>
+		    <div class="form-group"><br />
+                        <button type="submit">Submit</button>
+			<button id="cancel" type="button">Back</button>
+                    </div>
+            </form>
+                </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learners and Trainers - GCF Skill Acquisition Portal</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../static/css/table.css">
+    <script src="{{ url_for('static', filename='js/table.js') }}?{{ cache_id }}"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../static/images/pentecost_logo.jpeg" alt="GCF Logo" class="header-icon">
+            <h1>Learners and Trainers</h1>
+            <img src="../static/images/nysc_logo.jpeg" alt="NYSC Logo" class="header-icon">
+        </header>
+
+        <section>
+            <h2>Learners</h2>
+            <table id="learners-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>WhatsApp Contact</th>
+                        <th>Selected Skills</th>
+			<th>Registrate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Trainers</h2>
+            <table id="trainers-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+			<th>WhatsApp Contact</th>
+                        <th>Specialty</th>
+			<th>Registration Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 GCF Skill Acquisition Portal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

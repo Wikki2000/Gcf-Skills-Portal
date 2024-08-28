@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - GCF Skill Acquisition Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+	    <img src="{{ url_for('static', filename='images/pentecost_logo.jpeg') }}" alt="GCF Logo" class="header-icon">
+            <h1>GCF Skill Acquisition Portal</h1>
+	    <img src="{{ url_for('static', filename='images/nysc_logo.jpeg') }}" alt="Skill Icon" class="header-icon">
+        </header>
+
+        <section class="intro">
+            <p>
+		Welcome to the GCF Skill Acquisition Portal, your gateway to acquiring essential skills that will empower you to excel in your chosen career path.
+		Whether you’re looking to enhance your existing abilities or explore new areas of expertise, our portal offers a diverse range of skill development programs designed to meet your needs.
+	    </p>
+            <p>
+		Our programs are crafted to provide hands-on experience and practical knowledge, ensuring that you gain the skills required to succeed in today’s competitive job market.
+		Join us today and take the first step towards a brighter future.
+	     </p>
+        </section>
+
+        <section class="navigation">
+            <h2>Get Started</h2>
+            <p>Select an option below to proceed:</p>
+            <div class="links">
+		<a href="{{ url_for('register_learner') }}" class="button">Skill Registration Portal</a>
+		<a href="{{ url_for('admin') }}" class="button">Admin Login</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 GCF Skill Acquisition Portal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

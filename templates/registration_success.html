@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!----------------------------------------StyleSheet------------------------------------>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/registration_success.css') }}?{{ cache_id }}">
+        <title>Email verification</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/tick_icon.jpeg') }}" \>
+            <h2><strong>Registration Success</strong></h2>
+	    <p>Thanks for registering! We recieved your details.</p>
+            <a href="{{ url_for('home') }}">Ok</a>
+        </div>
+    </body>
+</html>

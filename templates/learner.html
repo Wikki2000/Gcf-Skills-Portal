@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner - GCF Skill Acquisition Registration Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learner.css') }}?{{ cache_id }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/learner.js') }}?{{ cache_id }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learner.css') }}?{{ cache_id }}">
+</head>
+<body>
+    <div class="container">
+        <form id="skills-form">
+            <h1>
+                <img src="{{ url_for('static', filename='images/pentecost_logo.jpeg') }}">
+                GCF Skill Acquisition Registration Portal
+                <img src="{{ url_for('static', filename='images/nysc_logo.jpeg') }}">
+            </h1>
+            <p>
+                Make your NYSC years productive by enrolling in the tech skills listed below.
+            </p>
+            <h4>Contact Details</h4>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your first and last name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required> 
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Contact</label>
+                <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp contact" required>
+            </div>
+	    <div class="form-group">
+                <label for="code">Code</label>
+                <input id="code" type="text" placeholder="Enter GCF ID" required>
+            </div>
+
+            <h4>Select a Skill</h4>
+            <p>
+                You can enroll in up to two skills by ticking the checkboxes below.<br>
+                If the skill you're looking for is not listed, please indicate it under "Others". Provision will be made for it in due time.
+            </p>
+            <div class="form-group">
+                <label><input name="skills" value="Basic Operation of Computer" type="checkbox"> Basic Operation of Computer</label>
+                <label><input name="skills" value="Front-End Development" type="checkbox"> Front-End Development</label>
+                <label><input name="skills" value="Back-End Development" type="checkbox"> Back-End Development</label>
+                <label><input name="skills" value="DevOps" type="checkbox"> DevOps</label>
+                <label><input name="skills" value="Data Analytics" type="checkbox"> Data Analytics</label>
+                <label><input name="skills" value="Python Programming" type="checkbox"> Python Programming</label>
+                <label><input id="others" name="skills" value="Graphic Design" type="checkbox"> Graphic Design</label>
+                <label for="other-skills">Others:</label>
+                <input type="text" id="other-skills" placeholder="Specify other skills">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <p>
+	Do you have skills and want to volunteer as a trainer? Click <strong><a href="{{ url_for('register_trainer') }}">here</a></strong>.
+        </p>
+    </div>
+</body>
+</html>
+
